@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "sass": "^1.69.5"
+  },
+  "scripts": {
+    "compile-templates-sass": "node-sass public/css/templates.scss -o public/css",
+    "compile-productList-sass": "node-sass public/css/productList.scss -o public/css",
+    "compile-productAdd-sass": "node-sass public/css/productAdd.scss -o public/css"
+  }
+}

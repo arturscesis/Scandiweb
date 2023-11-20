@@ -1,0 +1,20 @@
+#nav {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  right: 0rem;
+  background-color: #1c1d36;
+  color: #ffffff; }
+  #nav .btn-primary {
+    margin-right: 1rem;
+    color: #ffffff; }
+  #nav .title {
+    color: #ffffff; }
+
+#footer {
+  position: fixed;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+  background-color: #1c1d36;
+  color: #ffffff; }

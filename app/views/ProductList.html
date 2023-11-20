@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/templates.css">
+    <link rel="stylesheet" href="public/css/productList.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Product List Page</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" id="nav">
+        <div class="container">
+          <h1 class="title navbar-brand">Product List</h1>
+      
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="/scanditest/add" class="btn btn-primary me-md-2" type="button">ADD</a>
+            <button class="btn btn-danger" id="delete-product-btn" type="button">MASS DELETE</button>
+          </div>
+        </div>
+    </nav>
+
+    <form id="form" action="/scanditest/delete" method="post">
+      <div class="card-container">
+        <div class="row">
+          <?php foreach ($products as $product): ?>
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <input type="checkbox" class="delete-checkbox" data-product-id="<?php echo $product->getSku(); ?>">
+
+                  <h5 class="card-title"><?php echo $product->getSku(); ?></h5>
+                  <p class="card-text"><?php echo $product->getName(); ?></p>
+                  <p class="card-text"><?php echo $product->getPrice(); ?>$</p>
+
+                  <?php if ($product->getProductType() === 'DVD'): ?>
+                      <p class="card-text">Size: <?php echo $product->getSize(); ?>MB</p>
+                  <?php elseif ($product->getProductType() === 'Book'): ?>
+                      <p class="card-text">Weight: <?php echo $product->getWeight(); ?>KG</p>
+                  <?php elseif ($product->getProductType() === 'Furniture'): ?>
+                      <p class="card-text">Dimensions: <?php echo $product->getHeight(); ?>x<?php echo $product->getWidth(); ?>x<?php echo $product->getLength(); ?></p>
+                  <?php endif; ?>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+      <input type="hidden" name="selectedProducts" id="selectedProducts" value="">
+    </form>
+
+    <div id="footer"></div>
+    
+</body>
+<script src="public/js/footer.js"></script>
+<script src="public/js/checkboxes.js"></script>
+</html>

@@ -1,0 +1,50 @@
+
+body {
+    background-color: #2a2c4a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#product_form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5px;
+
+        label {
+            margin-bottom: 2px;
+        }
+
+        input {
+            padding: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 2px;
+        }
+
+        .validation-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+    }
+
+    #additionalFields {
+        display: none;
+    }
+}

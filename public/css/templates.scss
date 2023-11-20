@@ -1,0 +1,30 @@
+$background-color: #1c1d36;
+$text-color: #ffffff;
+
+#nav {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    background-color: $background-color;
+    color: $text-color;
+
+    .btn-primary {
+        margin-right: 1rem;
+        color: $text-color;
+    }
+
+    .title {
+        color: $text-color;
+    }
+
+}
+
+#footer {
+    position: fixed;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+    background-color: $background-color;
+    color: $text-color;
+}
