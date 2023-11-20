@@ -21,11 +21,9 @@ class Router {
             foreach ($this->routes[$method] as $route => $callback) {
                 $pattern = '#^' . preg_quote($route, '#') . '$#';
                 if (preg_match($pattern, $uri)) {
-                    // Route matches, call the callback
                     if (is_callable($callback)) {
                         call_user_func($callback);
                     } else {
-                        // You can handle other types of callbacks here, e.g., "Controller@action"
                         list($controller, $action) = explode('@', $callback);
                         $controllerInstance = new $controller();
                         call_user_func([$controllerInstance, $action]);
@@ -35,7 +33,6 @@ class Router {
             }
         }
 
-        // Route not found, handle 404
         http_response_code(404);
         echo '404 - Not Found';
     }

@@ -30,7 +30,6 @@ class AddController {
             $product->setPrice($price);
             $product->setProductType($type);
     
-            // Set additional attributes based on product type
             switch ($type) {
                 case 'DVD':
                     $size = $_POST['size'] ?? '';
