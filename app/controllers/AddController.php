@@ -2,7 +2,7 @@
 
 namespace App\controllers;
 
-use App\Src\ScandiTest\Product;
+use App\src\ScandiTest\Product;
 
 class AddController {
 

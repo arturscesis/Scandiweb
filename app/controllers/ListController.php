@@ -2,7 +2,7 @@
 
 namespace App\controllers;
 
-use App\Src\Scanditest\Product;
+use App\src\ScandiTest\Product;
 
 class ListController {
 
