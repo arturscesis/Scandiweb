@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Src\ScandiTest;
+namespace App\src\ScandiTest;
 
 use mysqli;
 
