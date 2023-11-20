@@ -88,7 +88,7 @@ class Product {
     }
 
     public function saveToDatabase() {
-        $conn = new \mysqli('localhost', 'root', '', 'scanditest');
+        $conn = new \mysqli('ilzyz0heng1bygi8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com', 'y3r9gakd4qsw4ihy', 'nioe769jo1js0ns7', 'kj1vvb38qpl2d0c9');
     
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -167,7 +167,7 @@ class Product {
     }
 
     public static function getAllProducts() {
-        $conn = new \mysqli('localhost', 'root', '', 'scanditest');
+        $conn = new \mysqli('ilzyz0heng1bygi8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com', 'y3r9gakd4qsw4ihy', 'nioe769jo1js0ns7', 'kj1vvb38qpl2d0c9');
 
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
@@ -199,7 +199,7 @@ class Product {
     }
 
     public static function deleteProduct($sku) {
-        $conn = new \mysqli('localhost', 'root', '', 'scanditest');
+        $conn = new \mysqli('ilzyz0heng1bygi8.chr7pe7iynqr.eu-west-1.rds.amazonaws.com', 'y3r9gakd4qsw4ihy', 'nioe769jo1js0ns7', 'kj1vvb38qpl2d0c9');
     
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
