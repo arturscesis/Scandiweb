@@ -17,13 +17,13 @@
       
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button type="submit" id="submit" class="btn btn-primary me-md-2">SAVE</button>
-            <a href="/scanditest/" class="btn btn-danger me-md-2" type="button">CANCEL</a>
+            <a href="/" class="btn btn-danger me-md-2" type="button">CANCEL</a>
           </div>
         </div>
     </nav>
 
     <div class="main-container">
-        <form method="post" action="/scanditest/store" id="product_form" name="form" onsubmit="return validateForm()">
+        <form method="post" action="/store" id="product_form" name="form" onsubmit="return validateForm()">
           <div class="form-group">
             <label for="sku" id="sku-label">SKU</label>
             <input type="text" class="form-control" id="sku" name="sku" oninput="validateField(this)">

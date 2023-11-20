@@ -19,7 +19,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
   #product_form .form-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 5px; }
     #product_form .form-group label {
       margin-bottom: 2px; }
