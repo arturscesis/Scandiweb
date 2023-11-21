@@ -28,7 +28,7 @@ class ListController {
                 Product::deleteProduct($sku);
             }
 
-            header('Location: /scanditest/');
+            header('Location: /');
             exit();
         } else {
             echo 'Error: Form not submitted';

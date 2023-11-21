@@ -56,7 +56,7 @@ class AddController {
 
             $product->saveToDatabase();
     
-            header('Location: /scanditest/');
+            header('Location: /');
             exit();
         } else {
             echo 'Error: Form not submitted';
